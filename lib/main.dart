@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Resturant UI',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: kPrimaryColor),
+        scaffoldBackgroundColor: Colors.white.withOpacity(.95),
         useMaterial3: false,
       ),
     );

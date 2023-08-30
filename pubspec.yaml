@@ -63,11 +63,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
 
-    - assets\images\Tracking & Maps.svg
-    - assets\images\Order illustration.svg
-    - assets\images\Safe Food.svg
-    - assets\images\Order Success.svg
-    - assets/images/ic_google.svg
+    - assets\images\
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

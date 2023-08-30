@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:resturant_ui_app/features/authentication/presentation/views/widgets/tab_bar_item.dart';
 import 'package:resturant_ui_app/features/authentication/presentation/views/widgets/tab_bar_view_items.dart';
 
@@ -18,15 +19,27 @@ class BottomSheetItem extends StatelessWidget {
                 const SizedBox(
                   height: 24.0,
                 ),
-                Container(
-                  width: 48.0,
-                  height: 6.0,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(150.0),
-                      color: const Color(0xffD2D4D8)),
+                InkWell(
+                  onTap: (){
+                    GoRouter.of(context).pop();
+                  },
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 25.0,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 170.0,vertical: 9.0),
+                      child: Container(
+                        width: 48.0,
+                        height: 6.0,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
+                            color: const Color(0xffD2D4D8)),
+                      ),
+                    ),
+                  ),
                 ),
                 const SizedBox(
-                  height: 40.0,
+                  height: 20.0,
                 ),
                 const TabBarItems(),
               ],
