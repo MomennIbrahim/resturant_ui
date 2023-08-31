@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-import '../utils/constace.dart';
-import '../utils/styles.dart';
 
 class CustomTextButton extends StatelessWidget {
   const CustomTextButton(
       {super.key,
       required this.text,
       required this.textColor,
-      required this.onPressed,
+      required this.onPressed, required this.style,
       });
 
   final String text;
   final Color textColor;
+  final TextStyle style;
   final Function onPressed;
 
   @override
@@ -21,10 +20,13 @@ class CustomTextButton extends StatelessWidget {
               onPressed: () {
                 onPressed();
               },
-              child: Text(
-                text,
-                style: Styles.style16
-                    .copyWith(color: textColor, fontWeight: FontWeight.w600),
+              child: Row(
+                children: [
+                  Text(
+                    text,
+                    style: style,
+                  ),
+                ],
               )),
     );
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SearchTextFormField extends StatelessWidget {
-  const SearchTextFormField(
+class CustomSearchTextFormField extends StatelessWidget {
+  const CustomSearchTextFormField(
       {super.key,
         required this.controller,
         required this.keyBoardTyp,
