@@ -45,6 +45,8 @@ class TodayNewArivableItem extends StatelessWidget {
                     Expanded(
                       child: Text(
                         'Ambrosia Hotel & Restaurant',
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                         style: Styles.style10.copyWith(
                             color: const Color(0xff6B7280),
                             fontWeight: FontWeight.w500),

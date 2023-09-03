@@ -39,6 +39,7 @@ dependencies:
   smooth_page_indicator: ^1.1.0
   carousel_slider: ^4.2.1
   font_awesome_flutter: ^10.5.0
+  marquee: ^2.2.3
 
 dev_dependencies:
   flutter_test:

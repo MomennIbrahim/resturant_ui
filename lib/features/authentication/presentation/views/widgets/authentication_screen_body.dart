@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
+import 'package:go_router/go_router.dart';
 import '../../../../../core/utils/styles.dart';
 import '../../../../../core/widgets/custom_button.dart';
 import 'bottom_sheet_item.dart';
@@ -54,7 +54,7 @@ class AuthenticationScreenBody extends StatelessWidget {
                       builder: (BuildContext context) {
                         return SizedBox(
                             height: MediaQuery.of(context).size.height / 1.4,
-                            child: const BottomSheetItem());
+                            child: const BottomSheetItem(isLogin: true,));
                       });
                 },
                 text: 'Create Account'),
@@ -62,7 +62,21 @@ class AuthenticationScreenBody extends StatelessWidget {
               height: 16.0,
             ),
             CustomElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  showModalBottomSheet(
+                      isScrollControlled: true,
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(36.0),
+                            topLeft: Radius.circular(36.0)),
+                      ),
+                      context: context,
+                      builder: (BuildContext context) {
+                        return SizedBox(
+                            height: MediaQuery.of(context).size.height / 1.4,
+                            child: const BottomSheetItem(isLogin: false,));
+                      });
+                },
                 text: 'Login',
                 textColor: const Color(0xff10B981),
                 backgroundColor: const Color(0xffD1FAE5)),

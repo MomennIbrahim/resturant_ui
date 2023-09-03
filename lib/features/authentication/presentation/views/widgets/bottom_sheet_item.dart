@@ -4,7 +4,9 @@ import 'package:resturant_ui_app/features/authentication/presentation/views/widg
 import 'package:resturant_ui_app/features/authentication/presentation/views/widgets/tab_bar_view_items.dart';
 
 class BottomSheetItem extends StatelessWidget {
-  const BottomSheetItem({super.key});
+  const BottomSheetItem({super.key, required this.isLogin});
+
+  final bool isLogin;
 
   @override
   Widget build(BuildContext context) {
@@ -41,12 +43,12 @@ class BottomSheetItem extends StatelessWidget {
                 const SizedBox(
                   height: 20.0,
                 ),
-                const TabBarItems(),
+                TabBarItems(isLogin: isLogin),
               ],
             ),
           ),
-          const SliverFillRemaining(
-            child:  TabBarViewItems(),
+           SliverFillRemaining(
+            child:  TabBarViewItems(isLogin: isLogin),
           )
         ] ,
       ),

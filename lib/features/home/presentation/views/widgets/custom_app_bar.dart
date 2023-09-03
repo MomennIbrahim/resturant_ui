@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marquee/marquee.dart';
 import '../../../../../core/utils/constace.dart';
 import '../../../../../core/utils/styles.dart';
 
@@ -32,10 +33,9 @@ class CustomAppBar extends StatelessWidget {
           Icons.location_on,
           color: kPrimaryColor,
         ),
-        Text(
+      Text(
           'Agrabad 435, Chittagong',
-          style: Styles.style12.copyWith(color: const Color(0xff4B5563)),
-        ),
+          style: Styles.style12.copyWith(color: const Color(0xff4B5563))),
       ]),
     );
   }

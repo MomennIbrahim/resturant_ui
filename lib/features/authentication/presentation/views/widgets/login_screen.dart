@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
+import 'package:resturant_ui_app/core/utils/app_router.dart';
 import 'package:resturant_ui_app/core/utils/constace.dart';
+import 'package:resturant_ui_app/core/utils/styles.dart';
 import 'package:resturant_ui_app/core/widgets/custom_button.dart';
 import 'package:resturant_ui_app/core/widgets/custom_text_button.dart';
 import 'package:resturant_ui_app/core/widgets/text_over_text_form_field.dart';
 import 'package:resturant_ui_app/features/authentication/presentation/views/widgets/email_text_field.dart';
-import 'package:resturant_ui_app/features/authentication/presentation/views/widgets/forgetpassword_screen.dart';
 import 'package:resturant_ui_app/features/authentication/presentation/views/widgets/password_text_field.dart';
 
 class LogInScreen extends StatelessWidget {
@@ -33,15 +35,15 @@ class LogInScreen extends StatelessWidget {
               text: "Forget Password?", 
               textColor: kPrimaryColor, 
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const ForgetPasswordScreen(),));
-              },
+                // Navigator.push(context, MaterialPageRoute(builder: (context) => const ForgetPasswordScreen(),));
+              }, style: Styles.style12,
             ),
           ),
           const SizedBox(height: 15,),
           CustomElevatedButton(
             text: "Login", 
             onPressed: (){
-              
+              GoRouter.of(context).push(AppRouter.kLayoutScreen);
             }
           ),
           const SizedBox(height: 25,),

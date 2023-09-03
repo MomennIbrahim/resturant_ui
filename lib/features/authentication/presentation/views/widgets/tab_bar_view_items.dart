@@ -1,14 +1,24 @@
 import 'package:flutter/material.dart';
+import 'login_screen.dart';
 import 'register_screen.dart';
 
 class TabBarViewItems extends StatelessWidget {
-  const TabBarViewItems({super.key});
+  const TabBarViewItems({super.key, required this.isLogin});
+
+  final bool isLogin;
 
   @override
   Widget build(BuildContext context) {
-    return TabBarView(physics: const BouncingScrollPhysics(), children: [
+    if(isLogin) {
+      return TabBarView(physics: const BouncingScrollPhysics(), children: [
       RegisterScreen(),
-      const Center(child: Text('Login')),
+      LogInScreen(),
     ]);
+    }else{
+      return TabBarView(physics: const BouncingScrollPhysics(), children: [
+        LogInScreen(),
+        RegisterScreen(),
+      ]);
+    }
   }
 }

@@ -5,6 +5,8 @@ import 'package:resturant_ui_app/features/history/presentation/views/history_scr
 import 'package:resturant_ui_app/features/home/presentation/views/home_screen.dart';
 import 'package:resturant_ui_app/features/profile/presentation/views/profile_screen.dart';
 
+import '../../../../home/presentation/views/widgets/marquee_text.dart';
+
 class LayoutScreenBody extends StatefulWidget {
   const LayoutScreenBody({super.key});
 
